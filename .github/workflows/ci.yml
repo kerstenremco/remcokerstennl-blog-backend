@@ -61,8 +61,8 @@ jobs:
           CI_COMMIT_EMAIL: ghbot@remcokersten.nl
         run: |
           cd infrarepo
-          sed -i "s#kerstenremco/remcokerstennl-blog-backend-likes:[^[:space:]]*#kerstenremco/remcokerstennl-blog-backend-likes:${{ steps.meta-likes.outputs.tags }}#g" likes/deployment.yml
-          sed -i "s#kerstenremco/remcokerstennl-blog-backend-contact:[^[:space:]]*#kerstenremco/remcokerstennl-blog-backend-contact:${{ steps.meta-contact.outputs.tags }}#g" contact/deployment.yml
+          sed -i "s#kerstenremco/remcokerstennl-blog-backend-likes:[^[:space:]]*#${{ steps.meta-likes.outputs.tags }}#g" likes/deployment.yml
+          sed -i "s#kerstenremco/remcokerstennl-blog-backend-contact:[^[:space:]]*#${{ steps.meta-contact.outputs.tags }}#g" contact/deployment.yml
           git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
           git config --global user.email "${{ env.CI_COMMIT_EMAIL }}"
           # Changes
