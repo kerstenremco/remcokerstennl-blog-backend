@@ -20,7 +20,7 @@ app.post("/:slug", async (req, res) => {
   if (!slug) return res.status(400).json({ error: "slug required" });
 
   await pool.query(`INSERT INTO likes (slug) VALUES ($1)`, [slug]);
-  res.status(201).json({ response: "like added" });
+  res.status(201).json({ response: "like added!!!" });
 });
 
 app.get("/:slug", async (req, res) => {
