@@ -50,7 +50,7 @@ jobs:
       - name: Checkout cd repo
         uses: actions/checkout@v4
         with:
-          repository: kerstenremco/remcokerstennl-blog-infra
+          repository: kerstenremco/remcokersten-blog-infra
           path: infrarepo
           token: ${{ secrets.GH_TOKEN }}
       - name: Commit and push changes (if any)
