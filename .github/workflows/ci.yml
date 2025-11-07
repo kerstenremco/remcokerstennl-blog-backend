@@ -52,7 +52,7 @@ jobs:
         with:
           repository: kerstenremco/remcokerstennl-blog-infra
           path: infrarepo
-          token: ${{ secrets.TSTTOKEN }}
+          token: ${{ secrets.GHTOKEN }}
       - name: Commit and push changes (if any)
         shell: bash
         env:
